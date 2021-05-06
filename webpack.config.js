@@ -14,7 +14,7 @@ module.exports = (env, _) => {
     externals: [webpackNodeExternals()],
 
     // Build process customization
-    plugins: [new NodemonPlugin()],
+    plugins: [new NodemonPlugin({ nodeArgs: '--inspect' })],
 
     // Module resolution
     resolve: { extensions: ['.ts'] },
