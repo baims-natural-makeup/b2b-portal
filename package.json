@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/baims-natural-makeup/b2b-portal#readme",
   "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.25.0",
     "eslint-config-standard": "^16.0.2",
     "nodemon-webpack-plugin": "^4.5.2",

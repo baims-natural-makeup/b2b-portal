@@ -17,6 +17,7 @@ module.exports = (env, _) => {
     plugins: [new NodemonPlugin()],
 
     // Module resolution
-    resolve: { extensions: ['.js'] }
+    resolve: { extensions: ['.js'] },
+    module: { rules: [{ test: /\.js$/, use: 'babel-loader' }] }
   }
 }
