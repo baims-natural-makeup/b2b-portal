@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint -c eslint.config.js .",
+    "postlint": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/baims-natural-makeup/b2b-portal/issues"
   },
-  "homepage": "https://github.com/baims-natural-makeup/b2b-portal#readme"
+  "homepage": "https://github.com/baims-natural-makeup/b2b-portal#readme",
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-standard": "^16.0.2",
+    "prettier": "^2.2.1"
+  }
 }
