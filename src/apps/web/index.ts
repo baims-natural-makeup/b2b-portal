@@ -1,6 +1,6 @@
 import { createServer } from 'http'
 
-function main() {
+function main(): void {
   const server = createServer((_, res) => {
     res.end('response')
   })
@@ -8,7 +8,7 @@ function main() {
   server.listen(3000, () => console.log('listening on 3000'))
 }
 
-function fatal(err, promise) {
+function fatal(err: Error, promise?: Promise<any>): never {
   console.error(err, promise ?? '')
   process.exit(1)
 }

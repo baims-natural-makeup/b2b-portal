@@ -7,7 +7,7 @@ module.exports = (env, _) => {
   return {
     mode: isDev ? 'development' : 'production',
     devtool: isDev ? 'eval-source-map' : false,
-    entry: { web: './src/apps/web/index.js' },
+    entry: { web: './src/apps/web/index.ts' },
 
     // Node environment
     target: 'node',
@@ -17,7 +17,7 @@ module.exports = (env, _) => {
     plugins: [new NodemonPlugin()],
 
     // Module resolution
-    resolve: { extensions: ['.js'] },
-    module: { rules: [{ test: /\.js$/, use: 'babel-loader' }] }
+    resolve: { extensions: ['.ts'] },
+    module: { rules: [{ test: /\.ts$/, use: 'babel-loader' }] }
   }
 }
