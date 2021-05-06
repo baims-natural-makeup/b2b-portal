@@ -1,4 +1,4 @@
-const { createServer } = require('http')
+import { createServer } from 'http'
 
 function main() {
   const server = createServer((_, res) => {
