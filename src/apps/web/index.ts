@@ -13,6 +13,13 @@ function fatal(err: Error, promise?: Promise<any>): never {
   process.exit(1)
 }
 
+function graceful(signal: string): never {
+  console.log(`shutting down (${signal})`)
+  process.exit(0)
+}
+
 process.on('unhandledRejection', fatal)
 process.on('uncaughtException', fatal)
+process.on('SIGINT', graceful)
+process.on('SIGTERM', graceful)
 main()

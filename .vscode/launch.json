@@ -6,6 +6,16 @@
   "configurations": [
     {
       "type": "pwa-node",
+      "name": "Launch via Docker Compose",
+      "request": "attach",
+      "restart": true,
+      "preLaunchTask": "docker-compose: up",
+      "postDebugTask": "docker-compose: down",
+      "remoteRoot": "/home/node/app",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "type": "pwa-node",
       "name": "Launch via NPM",
       "request": "launch",
       "restart": true,
